@@ -9,9 +9,13 @@ export default StyleSheet.create({
     padding: 4,
   },
   text: {
-    color: 'white',
+    color: 'black',
     fontWeight: '900',
     textAlign: 'center',
     fontSize: 18,
+  },
+  mainView: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });
