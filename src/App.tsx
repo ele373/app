@@ -6,9 +6,10 @@
  */
 
 import React from 'react';
-import {SafeAreaView, useColorScheme} from 'react-native';
+import {SafeAreaView, useColorScheme, Button as NButton} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Button from './components/uis/Button/Button';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -17,7 +18,14 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <SafeAreaView style={backgroundStyle}></SafeAreaView>;
+  return (
+    <SafeAreaView style={backgroundStyle}>
+      <Button text="Content" />
+      <Button text="Button2" />
+      <Button text="Button3" />
+      <NButton title="Hello" />
+    </SafeAreaView>
+  );
 }
 
 //const styles = StyleSheet.create({});
