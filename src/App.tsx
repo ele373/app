@@ -5,83 +5,39 @@
  * @format
  */
 
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
-  useColorScheme,
-  Image,
-  //Button as NButton,
-  Text,
-  View,
+  ScrollView,
   StyleSheet,
+  useColorScheme,
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import Button from './components/uis/Button/Button';
+import MainLayout from './components/layouts/MainLayout/MainLayout';
+import ListProduct from './components/pages/ListProduct/ListProduct';
+import Menu from './components/uis/Menu/Menu';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    console.log('Nouvelle valeur : ', counter);
-  }, [counter]);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   return (
     <SafeAreaView style={backgroundStyle}>
-      <View>
-        <Text style={styles.displayCounter}>Valeur du compteur</Text>
-        <Text style={{...styles.displayCounter, ...styles.big}}>{counter}</Text>
-      </View>
-      <Button
-        bgcolor="tomato"
-        color="green"
-        onPress={() => {
-          setCounter(counter + 1);
-          console.log(counter);
-        }}
-        style={{borderRadius: 64}}>
-        <Image
-          source={{
-            uri: 'https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/face-grin-tongue-1024.png',
-          }}
-          style={{width: 32, height: 32}}
-        />
-        <Text>Ajouter</Text>
-      </Button>
-      <Button
-        onPress={() => {
-          setCounter(counter - 1);
-          console.log(counter);
-        }}>
-        <Image
-          source={{
-            uri: 'https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/face-frown-512.png',
-          }}
-          style={{width: 32, height: 32}}
-        />
-        <Text>Retirer</Text>
-      </Button>
-      {/*  <Button>
-        <Text>toto</Text>
-      </Button> 
-      <NButton title="Hello" />*/}
+      <MainLayout>
+        <ScrollView style={styles.page}>
+          <ListProduct />
+        </ScrollView>
+        <Menu />
+      </MainLayout>
     </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
-  displayCounter: {
-    textAlign: 'center',
-    color: 'black',
-  },
-  big: {
-    fontSize: 19,
-    fontWeight: '900',
+  page: {
+    flexGrow: 1,
   },
 });
-
 export default App;

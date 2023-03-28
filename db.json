@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Coca cola 1.5l",
+      "price": 3.0,
+      "image": "https://cdn0.iconfinder.com/data/icons/united-states-2/185/Coca_Cola_bottle-512.png",
+      "description": "bottle",
+      "stock": 2
+    },
+    {
+        "id": 2,
+        "name": "Orange Juice",
+        "price": 2.0,
+        "image": "https://cdn2.iconfinder.com/data/icons/thirstee/128/beverage-juice-orange_juice-fruit_juice-drink-512.png",
+        "description": "bottle",
+        "stock": 1
+      },
+      {
+        "id": 2,
+        "name": "Milk",
+        "price": 2.5,
+        "image": "https://cdn0.iconfinder.com/data/icons/education-364/24/school-milk-lunch-drink-carton-learning-education-512.png",
+        "description": "bottle",
+        "stock": 10
+      }
+  ]
+}

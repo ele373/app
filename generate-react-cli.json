@@ -1,0 +1,42 @@
+{
+  "usesTypeScript": false,
+  "usesCssModule": false,
+  "cssPreprocessor": "css",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false
+    },
+    "rnfunction": {
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": false,
+      "customTemplates": {
+        "component": "grc-templates/genericFunction/TemplateName.js",
+        "style": "grc-templates/genericFunction/TemplateName.styles.js",
+        "test": "grc-templates/genericFunction/TemplateName-test.js",
+        "story": "grc-templates/genericFunction/Readme.md"
+      }
+    },
+    "rnlayoutfunction": {
+      "path": "src/components/layouts",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": false,
+      "customTemplates":{
+        "component": "grc-templates/genericLayoutFunction/TemplateName.js",
+        "style": "grc-templates/genericLayoutFunction/TemplateName.styles.js",
+        "test": "grc-templates/TemplateName-test.js",
+        "story": "grc-templates/genericLayoutFunction/Readme.md"
+      }
+    }
+  },
+  "usesStyledComponents": false
+}
