@@ -2,8 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Text, TouchableHighlight, View} from 'react-native';
 import styles from './Button.style';
-
-const Button = props => {
+interface IButtonProps {
+  style?: object;
+  bgcolor?: string;
+  color?: string;
+  text?: string;
+  children?: React.ReactElement | Array<React.ReactElement>;
+}
+const Button: React.FC<IButtonProps> = props => {
   console.log(props);
   return (
     <TouchableHighlight
